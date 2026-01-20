@@ -1,0 +1,775 @@
+
+## android_device_samsung_x1s
+
+- x1s: Migrate camera extra ID to soong_config_set
+- x1s: Switch to device-hubble makefile
+- x1s: Commonize fingerprint build target
+- x1s: Update some soong config variables to bool type
+- x1s: Move soong_config_set to device.mk
+- x1s: Drop COMMON_LUNCH_CHOICES
+
+## android_device_samsung_universal9830-common
+
+- fixup! universal9830: Remove RIL's protobuf patch
+- universal9830: Remove RIL's protobuf patch
+- universal9830: Undefine EDEN log tag
+- universal9830: Remove recovery init from vendor
+- universal9830: Kill redundant libcrypto shim
+- universal9830: Fix eSE SPI node permissions
+- universal9830: Move some Lineage HAL features to Hubble
+- universal9830: Move displayLightSensorType to Hubble
+- universal9830: Move brightness overlays to Hubble
+- universal9830: Move NFC config to Hubble
+- universal9830: Initialize device hubble
+- universal9830: Commonize fingerprint build target
+- universal9830: init: set mask_brightness to 319
+- universal9830: Update some soong config variables to bool type
+- universal9830: Kill AdvancedDisplay
+- universal9830: Enable blurs
+- universal9830: sepolicy: Unlabel /dev/sec-nfc
+- universal9830: Switch to AIDL eSE HAL
+- universal9830: Update NFC firmware path variables
+- universal9830: Switch to AIDL NFC HAL
+- universal9830: Remove eSE from manifest
+- universal9830: Drop GNSS from FCM
+- universal9830: Remove obsolete dex settings
+
+## android_device_samsung_slsi_sepolicy
+
+- common: Label /dev/sec-nfc
+- common: Label AIDL NFC HAL
+
+## android_hardware_samsung
+
+- pre-commit: Enable clang-format
+- sensors: Run through clang-format
+- ril: Run through clang-format
+- rebalance_interrupts: Run through clang-format
+- hidl: Run through clang-format
+- aidl: Run through clang-format
+- vibrator: Add some brackets
+- aidl: usb: Add some brackets
+- aidl: memtrack: Add some brackets
+- aidl: camera: Remove deprecated module
+- hidl: camera: Remove deprecated custom device impl and provider
+- aidl: vibrator: Migrate to select()
+- aidl: usb: gadget: Migrate to select()
+- aidl: camera: Migrate to select()
+- samsung: Remove loki_tool
+- samsung: Delete dtbhtoold
+- aidl: sensors: Define vintf_fragments as modules
+- aidl: vibrator: Use std::vector for effect data and clean up unnecessary field initializers
+- aidl: vibrator: Write use_sep_index value in constructor
+- aidl: fingerprint: Add missing include
+- aidl: fingerprint: Run through clang-format
+- aidl: fingerprint: Add some brackets
+- aidl: fingerprint: Allow more than one fingerprint location
+- Run `pre-commit run --all`
+- Introduce pre-commit & GitHub Actions for it
+- ril: Run dos2unix
+- fingerprint: Set defaults if no Z-order is set
+- fingerprint: Configurable UDFPS dim layer Z-order
+- fingerprint: FOD -> UDFPS
+- dap: Apply Expressive theme
+- aidl: codec2: Switch to the real boolean values in Soong config
+- dap: Convert for M3E support
+- dap: Properly merge with Settings category
+- dap: Place top intro above main switch
+- dap: Gray out profiles when DAP is disabled
+- dap: Use new method to listen for preference changes
+- dap: Move to PreferenceFragmentCompat
+- Revert "samsung: hidl: add vibrator HAL for SEC Haptic Engine"
+
+# android_hardware_samsung_slsi_nfc
+
+- nfc: Send rta store command in power off mode
+- nfc: Decrease /dev/sec-nfc permissions
+- nfc: Rename debug level property
+- nfc: Add vendor prefix and change service name
+- nfc: Remove the NFC HIDL HAL
+- nfc: Update & add AIDL support
+- nfc: halimpl: Remove sparse_crc32 usage again
+- nfc: Update halimpl
+- nfc: Rename the nfc_nci_samsung lib and the HIDL HAL
+
+# android_hardware_samsung_slsi-linaro_config
+
+- config: Switch to SPDX license headers
+- config: Initial configuration for s5e9925
+- fixup! config: Update some soong config variables to bool type
+- config: Update some soong config variables to bool type
+- config: Add configurable for sbwcwrapper priority
+- hwc: Rename configurable for SAJC
+- config: Add configurable for legacy libgdc option
+- gralloc: Add configurable for SGR Gralloc
+- hwc: Enable USE_LIBHDR*_PLUGIN when BOARD_LIBHDR*_PLUGIN is set
+- openmax: Rename filmgrain configurable
+- openmax: Wire up ST2094 properly
+- config: add configurable for libhdr_header_version
+- config: Drop ExynosHWCService
+- config: Set recovery brightness paths
+- fixup! config: wire up hwc config
+- BoardConfigCommon: set target soc base for acryl
+- openmax: wire up more configurables
+- fixup! config: add openmax compatibility makefile
+- config: Add missing license header
+
+# android_hardware_samsung_slsi-linaro_exynos
+
+- exynos: add support for V4L2_PIX_FMT_NV12M_SBWCL_64_8B_FR/HAL_PIXEL_FORMAT_EXYNOS_420_SP_M_10B_64_SBWC_L_FR
+- exynos: Switch to the real boolean values in Soong config
+- libdisplaycolor: define log tag
+- libhdr-common-header: provide struct hdrCoef
+- libhdr-common-headers: export platform independent headers
+- exynos: Add kernel-6.1-headers
+- exynos: Kill unittests
+
+# android_hardware_samsung_slsi-linaro_graphics
+
+- libhwc2.1: Fix boolean logic in needDstBufRealloc check
+- libacryl: add support to sbwc_v2_8
+- graphics: add support for V4L2_PIX_FMT_NV12M_SBWCL_64_8B_FR/HAL_PIXEL_FORMAT_EXYNOS_420_SP_M_10B_64_SBWC_L_FR
+- graphics: Switch to the real boolean values in Soong config
+- graphics: libhwc2.1: wire up libhdr_header_version
+- libacryl: make the libhdrinterface headers configurable
+- libhwc2.1: Wire up USES_VIRTUAL_DISPLAY
+- graphics: Drop ExynosHWCService
+
+# android_hardware_samsung_slsi-linaro_interfaces
+
+- interfaces: Kill EPIC HIDL
+- interfaces: Add VINTF fragment for SbwcDecompService
+
+# android_hardware_samsung_slsi-linaro_openmax
+
+- openmax: Switch to the real boolean values in Soong config
+
+# android_kernel_samsung_universal9830
+
+- drivers: input: touchscreen: Don't guard game mode for sec y79a_c
+- UPSTREAM: epoll: fix compat syscall wire up of epoll_pwait2
+- BACKPORT: epoll: wire up syscall epoll_pwait2
+- UPSTREAM: epoll: add syscall epoll_pwait2
+- BACKPORT: epoll: convert internal api to timespec64
+- UPSTREAM: close_range(): fix the logics in descriptor table trimming
+- UPSTREAM: fs: fix fd table size alignment properly
+- UPSTREAM: fs: fd tables have to be multiples of BITS_PER_LONG
+- UPSTREAM: file: simplify logic in __close_range()
+- UPSTREAM: file: fix close_range() for unshare+cloexec
+- UPSTREAM: close_range: unshare all fds for CLOSE_RANGE_UNSHARE | CLOSE_RANGE_CLOEXEC
+- UPSTREAM: fs, close_range: add flag CLOSE_RANGE_CLOEXEC
+- BACKPORT: arch: wire-up close_range()
+- UPSTREAM: close_range: add CLOSE_RANGE_UNSHARE
+- UPSTREAM: open: add close_range()
+- arm64: configs: Disable CONFIG_PAGE_STEAL
+- arm64: configs: Enable XDP_SOCKETS
+- arm64: configs: Enable CONFIG_ANDROID_VENDOR_HOOKS
+- arm64: configs: Enable CONFIG_FUSE_BPF
+- fs: fuse: Pick Samsung changes from S918B
+- fixup! bpf: decouple the lifetime of cgroup_bpf from cgroup itself
+- UPSTREAM: net: add umem reference in netdev{_rx}_queue
+- UPSTREAM: jffs2: Fix mounting under new mount API
+- UPSTREAM: vfs: Convert ramfs, shmem, tmpfs, devtmpfs, rootfs to use the new mount API
+- UPSTREAM: make shmem_fill_super() static
+- UPSTREAM: make ramfs_fill_super() static
+- UPSTREAM: don't bother with registering rootfs
+- UPSTREAM: devtmpfs: don't mix {ramfs,shmem}_fill_super() with mount_single()
+- UPSTREAM: shmem_parse_one(): switch to use of fs_parse()
+- UPSTREAM: shmem_parse_options(): take handling a single option into a helper
+- UPSTREAM: shmem_parse_options(): don't bother with mpol in separate variable
+- UPSTREAM: shmem_parse_options(): use a separate structure to keep the results
+- UPSTREAM: fs: fs_parser: fix printk format warning
+- BACKPORT: maccess: rename probe_user_{read,write} to copy_{from,to}_user_nofault
+- BACKPORT: maccess: rename probe_kernel_address to get_kernel_nofault
+- BACKPORT: tracing/kprobes: handle mixed kernel/userspace probes better
+- BACKPORT: maccess: rename probe_kernel_{read,write} to copy_{from,to}_kernel_nofault
+- UPSTREAM: maccess: unexport probe_kernel_write()
+- UPSTREAM: maccess: return -ERANGE when probe_kernel_read() fails
+- UPSTREAM: maccess: allow architectures to provide kernel probing directly
+- UPSTREAM: maccess: remove strncpy_from_unsafe
+- UPSTREAM: bpf:bpf_seq_printf(): handle potentially unsafe format string better
+- UPSTREAM: bpf: Use strncpy_from_unsafe_strict() in bpf_seq_printf() helper
+- UPSTREAM: bpf: handle the compat string in bpf_trace_copy_string better
+- UPSTREAM: bpf: factor out a bpf_trace_copy_string helper
+- BACKPORT: bpf: Restrict bpf_trace_printk()'s %s usage and add %pks, %pus specifier
+- BACKPORT: maccess: always use strict semantics for probe_kernel_read
+- UPSTREAM: maccess: unify the probe kernel arch hooks
+- UPSTREAM: maccess: remove probe_read_common and probe_write_common
+- BACKPORT: maccess: rename strncpy_from_unsafe_strict to strncpy_from_kernel_nofault
+- UPSTREAM: maccess: remove duplicate kerneldoc comments
+- UPSTREAM: maccess: remove various unused weak aliases
+- UPSTREAM: mm/mmu_notifier: contextual information for event triggering invalidation
+- UPSTREAM: mm/mmu_notifier: mm/rmap.c: Fix a mmu_notifier range bug in try_to_unmap_one
+- UPSTREAM: mm/memory.c: initialise mmu_notifier_range correctly
+- BACKPORT: mm/mmu_notifier: use structure for invalidate_range_start/end calls v2
+- BACKPORT: FROMLIST: mm: cache some VMA fields in the vm_fault structure
+- UPSTREAM: Revert "mm: make faultaround produce old ptes"
+- UPSTREAM: mm/memory.c: Add memory read privilege on page fault handling
+- BACKPORT: mm/mmu_notifier: use structure for invalidate_range_start/end callback
+- UPSTREAM: mm/hmm: invalidate device page table at start of invalidation
+- UPSTREAM: mm/hmm: use a structure for update callback parameters
+- UPSTREAM: netprio: use css ID instead of cgroup ID
+- UPSTREAM: ANDROID: fuse-bpf: Correct fuse bpf feature flag
+- UPSTREAM: virtiofs: add filesystem context source name check
+- UPSTREAM: fuse: don't truncate cached, mutated symlink
+- UPSTREAM: fuse: update stats for pages in dropped aux writeback list
+- UPSTREAM: virtiofs: forbid newlines in tags
+- UPSTREAM: fuse: verify {g,u}id mount options correctly
+- BACKPORT: fuse: name fs_context consistently
+- UPSTREAM: fuse: fix root lookup with nonzero generation
+- UPSTREAM: ANDROID: fuse-bpf: Fix the issue of abnormal lseek system calls
+- UPSTREAM: ANDROID: fuse-bpf: Follow mounts in lookups
+- UPSTREAM: fuse: dax: set fc->dax to NULL in fuse_dax_conn_free()
+- BACKPORT: ANDROID: fuse-bpf: Ignore readaheads unless they go to the daemon
+- UPSTREAM: ANDROID: fuse-bpf: Add NULL pointer check in fuse_release_in
+- UPSTREAM: ANDROID: fs/passthrough: Fix compatibility with R/O file system
+- UPSTREAM: ANDROID: fuse-bpf: Add NULL pointer check in fuse_entry_revalidate
+- UPSTREAM: ANDROID: fuse-bpf: Get correct inode in mkdir
+- UPSTREAM: ANDROID: fuse-bpf: Use stored bpf for create_open
+- UPSTREAM: ANDROID: fuse-bpf: Add bpf to negative fuse_dentry
+- UPSTREAM: ANDROID: fuse-bpf: Check inode not null
+- UPSTREAM: ANDROID: fuse-bpf: Add partial ioctl support
+- UPSTREAM: ANDROID: fuse-bpf: Add partial flock support
+- UPSTREAM: ANDROID: fuse-bpf: Move FUSE_RELEASE to correct place
+- UPSTREAM: ANDROID: fuse-bpf: Ensure bpf field can never be nulled
+- UPSTREAM: ANDROID: fuse-bpf: Simplify and fix setting bpf program
+- UPSTREAM: fuse: fix deadlock between atomic O_TRUNC and page invalidation
+- UPSTREAM: fuse: always revalidate rename target dentry
+- UPSTREAM: fuse: fix attr version comparison in fuse_read_update_size()
+- UPSTREAM: fuse: check s_root when destroying sb
+- UPSTREAM: virtiofs: split requests that exceed virtqueue size
+- UPSTREAM: virtiofs: clean up error handling in virtio_fs_get_tree()
+- UPSTREAM: ANDROID: fuse-bpf: Run bpf with migration disabled
+- UPSTREAM: ANDROID: fuse-bpf: Correctly put backing files
+- UPSTREAM: ANDROID: fuse-bpf: Do not change bpf program in lookups
+- BACKPORT: fuse: always revalidate if exclusive create
+- UPSTREAM: ANDROID: fuse-bpf: Add /sys/fs flags for fuse-bpf version
+- UPSTREAM: fuse: lock inode unconditionally in fuse_fallocate()
+- UPSTREAM: fuse: fix readdir cache race
+- UPSTREAM: fuse: add file_modified() to fallocate
+- UPSTREAM: ANDROID: fuse-bpf: set error_in to ENOENT in negative lookup
+- UPSTREAM: ANDROID: fuse-bpf: readddir postfilter fixes
+- UPSTREAM: fuse: Remove the control interface for virtio-fs
+- UPSTREAM: ANDROID: fix kernelci error in fs/fuse/dir.c
+- UPSTREAM: ANDROID: fuse-bpf: Fix RCU/reference issue
+- UPSTREAM: ANDROID: fuse-bpf: Always call revalidate for backing
+- UPSTREAM: ANDROID: fuse-bpf: Adjust backing handle funcs
+- UPSTREAM: ANDROID: fuse-bpf: Fix revalidate error path and backing handling
+- UPSTREAM: ANDROID: fuse: Don't use readdirplus w/ nodeid 0
+- UPSTREAM: ANDROID: fuse-bpf: Fix use of get_fuse_inode
+- UPSTREAM: ANDROID: fuse-bpf: Make sure force_again flag is false by default
+- UPSTREAM: ANDROID: fuse-bpf: Make inodes with backing_fd reachable for regular FUSE fuse_iget
+- UPSTREAM: Revert "ANDROID: fuse-bpf: use target instead of parent inode to execute backing revalidate"
+- UPSTREAM: ANDROID: fuse-bpf: use target instead of parent inode to execute backing revalidate
+- UPSTREAM: ANDROID: fuse-bpf: Fix non-fusebpf build
+- UPSTREAM: ANDROID: fuse-bpf: Fix misuse of args.out_args
+- BACKPORT: ANDROID: fuse-bpf: Use fuse_bpf_args in uapi
+- UPSTREAM: ANDROID: fuse-bpf: Fix read_iter
+- UPSTREAM: ANDROID: fuse-bpf: Use cache and refcount
+- UPSTREAM: ANDROID: fuse-bpf: Rename iocb_fuse to iocb_orig
+- UPSTREAM: ANDROID: fuse-bpf: Fix fixattr in rename
+- UPSTREAM: ANDROID: fuse-bpf: Fix readdir
+- UPSTREAM: ANDROID: fuse-bpf: Fix lseek return value for offset 0
+- UPSTREAM: ANDROID: fuse-bpf: fix read_iter and write_iter
+- BACKPORT: vfs: add vfs_iocb_iter_[read|write] helper functions
+- UPSTREAM: ANDROID: fuse-bpf: fix special devices
+- UPSTREAM: ANDROID: fuse-bpf: support FUSE_LSEEK
+- UPSTREAM: ANDROID: fuse-bpf: Add support for FUSE_COPY_FILE_RANGE
+- UPSTREAM: ANDROID: fuse-bpf: Report errors to finalize
+- UPSTREAM: ANDROID: fuse-bpf: Avoid reusing uint64_t for file
+- UPSTREAM: ANDROID: fuse-bpf: Fix CONFIG_FUSE_BPF typo in FUSE_FSYNCDIR
+- UPSTREAM: ANDROID: fuse-bpf: Move fd operations to be synchronous
+- UPSTREAM: ANDROID: fuse-bpf: Invalidate if lower is unhashed
+- UPSTREAM: ANDROID: fuse-bpf: Move bpf earlier in fuse_permission
+- UPSTREAM: ANDROID: fuse-bpf: Update attributes on file write
+- UPSTREAM: ANDROID: fuse: allow mounting with no userspace daemon
+- UPSTREAM: ANDROID: fuse-bpf: Support FUSE_STATFS
+- UPSTREAM: ANDROID: fuse-bpf: Fix filldir
+- UPSTREAM: ANDROID: fuse-bpf: fix fuse_create_open_finalize
+- UPSTREAM: ANDROID: fuse: add bpf support for removexattr
+- UPSTREAM: ANDROID: fuse-bpf: Fix truncate
+- UPSTREAM: fuse: Pass correct lend value to filemap_write_and_wait_range()
+- UPSTREAM: ANDROID: fuse: Fix umasking in backing
+- UPSTREAM: ANDROID: fs/fuse: Backing move returns EXDEV if TO not backed
+- UPSTREAM: ANDROID: bpf-fuse: Fix Setattr
+- UPSTREAM: ANDROID: fuse-bpf: Support inotify
+- UPSTREAM: ANDROID: fuse-bpf: Make compile with CONFIG_FUSE but no CONFIG_FUSE_BPF
+- UPSTREAM: ANDROID: fuse-bpf: Fix perms on readdir
+- UPSTREAM: ANDROID: fuse-bpf: Check if mkdir dentry setup
+- UPSTREAM: ANDROID: fuse-bpf: Close backing fds in fuse_dentry_revalidate
+- UPSTREAM: ANDROID: fuse-bpf: Close backing-fd on both paths
+- UPSTREAM: ANDROID: fuse-bpf: Partial fix for mmap'd files
+- BACKPORT: ANDROID: fuse-bpf v1
+- UPSTREAM: sched/core: Convert get_task_struct() to return the task
+- BACKPORT: sched/core: Convert task_struct.usage to refcount_t
+- BACKPORT: ANDROID: fuse: Move functions in preparation for fuse-bpf
+- UPSTREAM: fuse: fix page stealing
+- UPSTREAM: fuse: fix use after free in fuse_read_interrupt()
+- UPSTREAM: fuse: flush extending writes
+- UPSTREAM: fuse: fix illegal access to inode with reused nodeid
+- UPSTREAM: new helper: inode_wrong_type()
+- UPSTREAM: fuse: Fix infinite loop in sget_fc()
+- UPSTREAM: fuse: Fix crash if superblock of submount gets killed early
+- UPSTREAM: fuse: Fix crash in fuse_dentry_automount() error path
+- UPSTREAM: virtiofs: fix userns
+- UPSTREAM: fuse: invalidate attrs when page writeback completes
+- UPSTREAM: fuse: fix write deadlock
+- UPSTREAM: virtiofs: fix memory leak in virtio_fs_probe()
+- BACKPORT: ANDROID: mm: page_pinner: use put_user_page at fuse_copy_finish
+- UPSTREAM: virtiofs: Fail dax mount if device does not support it
+- UPSTREAM: virtiofs fix leak in setup
+- UPSTREAM: virtiofs: calculate number of scatter-gather elements accurately
+- UPSTREAM: fuse: connection remove fix
+- UPSTREAM: fuse: implement crossmounts
+- BACKPORT: bdi: initialize ->ra_pages and ->io_pages in bdi_init
+- UPSTREAM: fuse: Allow fuse_fill_super_common() for submounts
+- BACKPORT: fuse: split fuse_mount off of fuse_conn
+- UPSTREAM: fuse: drop fuse_conn parameter where possible
+- UPSTREAM: fuse: store fuse_conn in fuse_req
+- UPSTREAM: fuse: add submount support to <uapi/linux/fuse.h>
+- UPSTREAM: fuse: fix the ->direct_IO() treatment of iov_iter
+- UPSTREAM: virtiofs: add logic to free up a memory range
+- UPSTREAM: virtiofs: maintain a list of busy elements
+- UPSTREAM: virtiofs: serialize truncate/punch_hole and dax fault path
+- UPSTREAM: virtiofs: define dax address space operations
+- UPSTREAM: virtiofs: add DAX mmap support
+- UPSTREAM: virtiofs: implement dax read/write operations
+- UPSTREAM: virtiofs: introduce setupmapping/removemapping commands
+- UPSTREAM: virtiofs: implement FUSE_INIT map_alignment field
+- UPSTREAM: virtiofs: keep a list of free dax memory ranges
+- fuse: backport virtiofs to use fs_parameter_spec
+- BACKPORT: libnvdimm: add dax_dev sync flag
+- UPSTREAM: virtio: Add get_shm_region method
+- UPSTREAM: dax, pmem: Add a dax operation zero_page_range
+- UPSTREAM: virtio_config: LE config space accessors
+- UPSTREAM: virtiofs: add a mount option to enable dax
+- UPSTREAM: virtiofs: set up virtio_fs dax_device
+- UPSTREAM: virtiofs: get rid of no_mount_options
+- UPSTREAM: virtiofs: provide a helper function for virtqueue initialization
+- UPSTREAM: fuse: update project homepage
+- UPSTREAM: virtio_fs: convert to LE accessors
+- UPSTREAM: fuse: don't ignore errors from fuse_writepages_fill()
+- UPSTREAM: fuse: clean up condition for writepage sending
+- UPSTREAM: fuse: reject options on reconfigure via fsconfig(2)
+- UPSTREAM: fuse: ignore 'data' argument of mount(..., MS_REMOUNT)
+- UPSTREAM: fuse: use ->reconfigure() instead of ->remount_fs()
+- UPSTREAM: fuse: fix warning in tree_insert() and clean up writepage insertion
+- UPSTREAM: fuse: move rb_erase() before tree_insert()
+- UPSTREAM: fuse: copy_file_range should truncate cache
+- UPSTREAM: fuse: fix copy_file_range cache issues
+- UPSTREAM: fuse: optimize writepages search
+- UPSTREAM: fuse: update attr_version counter on fuse_notify_inval_inode()
+- UPSTREAM: fuse: use dump_page
+- UPSTREAM: virtiofs: do not use fuse_fill_super_common() for device installation
+- UPSTREAM: fuse: always allow query of st_dev
+- UPSTREAM: fuse: always flush dirty data on close(2)
+- UPSTREAM: fuse: invalidate inode attr in writeback cache mode
+- UPSTREAM: fuse: Update stale comment in queue_interrupt()
+- UPSTREAM: virtiofs: schedule blocking async replies in separate worker
+- UPSTREAM: fuse: fix stack use after return
+- UPSTREAM: fuse: use true,false for bool variable
+- UPSTREAM: fuse: Support RENAME_WHITEOUT flag
+- UPSTREAM: fuse: don't overflow LLONG_MAX with end offset
+- UPSTREAM: fix up iter on short count in fuse_direct_io()
+- UPSTREAM: fuse: fix fuse_send_readpages() in the syncronous read case
+- UPSTREAM: fuse: fix Kconfig indentation
+- UPSTREAM: fuse: fix leak of fuse_io_priv
+- UPSTREAM: virtiofs: Use completions while waiting for queue to be drained
+- UPSTREAM: virtiofs: Do not send forget request "struct list_head" element
+- UPSTREAM: virtiofs: Use a common function to send forget
+- UPSTREAM: virtiofs: Fix old-style declaration
+- UPSTREAM: fuse: verify write return
+- BACKPORT: compat_ioctl: move more drivers to compat_ptr_ioctl
+- UPSTREAM: compat_ioctl: add compat_ptr_ioctl()
+- UPSTREAM: fuse: redundant get_fuse_inode() calls in fuse_writepages_fill()
+- UPSTREAM: fuse: Add changelog entries for protocols 7.1 - 7.8
+- UPSTREAM: virtiofs: Remove set but not used variable 'fc'
+- UPSTREAM: virtiofs: Retry request submission from worker context
+- UPSTREAM: virtiofs: Count pending forgets as in_flight forgets
+- UPSTREAM: virtiofs: Set FR_SENT flag only after request has been sent
+- UPSTREAM: virtiofs: No need to check fpq->connected state
+- UPSTREAM: virtiofs: Do not end request in submission context
+- UPSTREAM: fuse: don't advise readdirplus for negative lookup
+- UPSTREAM: fuse: don't dereference req->args on finished request
+- UPSTREAM: virtio-fs: don't show mount options
+- UPSTREAM: virtio-fs: Change module name to virtiofs.ko
+- UPSTREAM: fuse: Make fuse_args_to_req static
+- UPSTREAM: fuse: fix beyond-end-of-page access in fuse_parse_cache()
+- UPSTREAM: fuse: unexport fuse_put_request
+- UPSTREAM: fuse: kmemcg account fs data
+- UPSTREAM: fuse: on 64-bit store time in d_fsdata directly
+- fixup! FROMLIST: fuse: give wakeup hints to the scheduler
+- UPSTREAM: virtio-fs: add virtiofs filesystem
+- UPSTREAM: iommu: Add virtio-iommu driver
+- UPSTREAM: fuse: reserve byteswapped init opcodes
+- UPSTREAM: fuse: reserve values for mapping protocol
+- UPSTREAM: fuse: allow skipping control interface and forced unmount
+- UPSTREAM: fuse: dissociate DESTROY from fuseblk
+- UPSTREAM: fuse: delete dentry if timeout is zero
+- UPSTREAM: fuse: separate fuse device allocation and installation in fuse_conn
+- BACKPORT: fuse: add fuse_iqueue_ops callbacks
+- UPSTREAM: fuse: extract fuse_fill_super_common()
+- UPSTREAM: fuse: export fuse_dequeue_forget() function
+- UPSTREAM: fuse: export fuse_get_unique()
+- UPSTREAM: fuse: export fuse_send_init_request()
+- UPSTREAM: fuse: export fuse_len_args()
+- UPSTREAM: fuse: export fuse_end_request()
+- BACKPORT: fuse: fix request limit
+- UPSTREAM: fuse: stop copying pages to fuse_req
+- BACKPORT: fuse: stop copying args to fuse_req
+- UPSTREAM: fuse: clean up fuse_req
+- UPSTREAM: fuse: simplify request allocation
+- UPSTREAM: fuse: unexport request ops
+- UPSTREAM: fuse: convert retrieve to simple api
+- UPSTREAM: fuse: convert release to simple api
+- UPSTREAM: cuse: convert init to simple api
+- BACKPORT: fuse: convert init to simple api
+- UPSTREAM: fuse: convert writepages to simple api
+- UPSTREAM: fuse: convert readdir to simple api
+- UPSTREAM: fuse: convert readpages to simple api
+- UPSTREAM: fuse: convert direct_io to simple api
+- UPSTREAM: fuse: add simple background helper
+- UPSTREAM: fuse: convert sync write to simple api
+- UPSTREAM: fuse: covert readpage to simple api
+- UPSTREAM: fuse: fuse_short_read(): don't take fuse_req as argument
+- UPSTREAM: fuse: convert ioctl to simple api
+- UPSTREAM: fuse: move page alloc
+- UPSTREAM: fuse: convert readlink to simple api
+- BACKPORT: fuse: add pages to fuse_args
+- UPSTREAM: fuse: convert destroy to simple api
+- UPSTREAM: fuse: add nocreds to fuse_args
+- UPSTREAM: fuse: convert fuse_force_forget() to simple api
+- UPSTREAM: fuse: add noreply to fuse_args
+- UPSTREAM: fuse: convert flush to simple api
+- UPSTREAM: fuse: simplify 'nofail' request
+- UPSTREAM: fuse: rearrange and resize fuse_args fields
+- BACKPORT: fuse: flatten 'struct fuse_args'
+- BACKPORT: vfs: subtype handling moved to fuse
+- UPSTREAM: cuse: fix broken release
+- UPSTREAM: fuse: cleanup fuse_wait_on_page_writeback
+- UPSTREAM: fuse: require /dev/fuse reads to have enough buffer capacity (take 2)
+- UPSTREAM: fuse: copy_file_range needs to strip setuid bits and update timestamps
+- BACKPORT: vfs: allow copy_file_range to copy across devices
+- BACKPORT: vfs: no fallback for ->copy_file_range
+- UPSTREAM: vfs: introduce generic_copy_file_range()
+- UPSTREAM: Revert "fuse: require /dev/fuse reads to have enough buffer capacity"
+- UPSTREAM: treewide: Replace GPLv2 boilerplate/reference with SPDX - rule 428
+- UPSTREAM: fuse: extract helper for range writeback
+- UPSTREAM: fuse: fix copy_file_range() in the writeback case
+- UPSTREAM: fuse: add FUSE_WRITE_KILL_PRIV
+- UPSTREAM: fuse: clean up fuse_alloc_inode
+- UPSTREAM: fuse: switch to ->free_inode()
+- UPSTREAM: fuse: Add ioctl flag for x32 compat ioctl
+- UPSTREAM: fuse: fix changelog entry for protocol 7.9
+- UPSTREAM: fuse: fix changelog entry for protocol 7.12
+- UPSTREAM: fuse: document fuse_fsync_in.fsync_flags
+- UPSTREAM: fuse: require /dev/fuse reads to have enough buffer capacity
+- BACKPORT: fuse: allow filesystems to have precise control over data cache
+- UPSTREAM: fuse: convert printk -> pr_*
+- BACKPORT: mm: refactor readahead defines in mm.h
+- UPSTREAM: fuse: cache readdir calls if filesystem opts out of opendir
+- BACKPORT: fuse: support clients that don't implement 'opendir'
+- BACKPORT: fuse: lift bad inode checks into callers
+- BACKPORT: fuse: multiplex cached/direct_io file operations
+- UPSTREAM: fuse add copy_file_range to direct io fops
+- UPSTREAM: fuse: use iov_iter based generic splice helpers
+- UPSTREAM: fuse: Switch to using async direct IO for FOPEN_DIRECT_IO
+- UPSTREAM: fuse: use atomic64_t for khctr
+- UPSTREAM: fuse: clean up aborted
+- UPSTREAM: fuse: Protect ff->reserved_req via corresponding fi->lock
+- UPSTREAM: fuse: Protect fi->nlookup with fi->lock
+- UPSTREAM: fuse: Introduce fi->lock to protect write related fields
+- UPSTREAM: fuse: Convert fc->attr_version into atomic64_t
+- UPSTREAM: fuse: Add fuse_inode argument to fuse_prepare_release()
+- UPSTREAM: fuse: Verify userspace asks to requeue interrupt that we really sent
+- UPSTREAM: fuse: Do some refactoring in fuse_dev_do_write()
+- UPSTREAM: fuse: Wake up req->waitq of only if not background
+- BACKPORT: fuse: Optimize request_end() by not taking fiq->waitq.lock
+- UPSTREAM: fuse: Kill fasync only if interrupt is queued in queue_interrupt()
+- UPSTREAM: fuse: Remove stale comment in end_requests()
+- UPSTREAM: fuse: Replace page without copying in fuse_writepage_in_flight()
+- UPSTREAM: fuse: fix leaked aux requests
+- UPSTREAM: fuse: only reuse auxiliary request in fuse_writepage_in_flight()
+- UPSTREAM: fuse: clean up fuse_writepage_in_flight()
+- UPSTREAM: fuse: extract fuse_find_writeback() helper
+- UPSTREAM: cuse: fix ioctl
+- UPSTREAM: fuse: Fix memory leak in fuse_dev_free()
+- UPSTREAM: fuse: fix revalidation of attributes for permission check
+- UPSTREAM: fuse: fix fsync on directory
+- UPSTREAM: fuse: Add bad inode check in fuse_destroy_inode()
+- BACKPORT: fuse: enable caching of symlinks
+- UPSTREAM: fuse: only invalidate atime in direct read
+- UPSTREAM: fuse: don't need GETATTR after every READ
+- UPSTREAM: fuse: allow fine grained attr cache invaldation
+- UPSTREAM: fuse: realloc page array
+- BACKPORT: fuse: add max_pages to init_out
+- UPSTREAM: fuse: allocate page array more efficiently
+- UPSTREAM: fuse: reduce size of struct fuse_inode
+- UPSTREAM: fuse: use iversion for readdir cache verification
+- UPSTREAM: fuse: use mtime for readdir cache verification
+- UPSTREAM: fuse: add readdir cache version
+- BACKPORT: fuse: allow using readdir cache
+- UPSTREAM: fuse: allow caching readdir
+- UPSTREAM: fuse: add FOPEN_CACHE_DIR
+- UPSTREAM: fuse: extract fuse_emit() helper
+- BACKPORT: fuse: split out readdir.c
+- UPSTREAM: fuse: Use hash table to link processing request
+- UPSTREAM: fuse: kill req->intr_unique
+- UPSTREAM: fuse: change interrupt requests allocation algorithm
+- UPSTREAM: fuse: do not take fc->lock in fuse_request_send_background()
+- BACKPORT: fuse: introduce fc->bg_lock
+- UPSTREAM: fuse: add locking to max_background and congestion_threshold changes
+- UPSTREAM: fuse: use list_first_entry() in flush_bg_queue()
+- BACKPORT: fuse: add support for copy_file_range()
+- UPSTREAM: fuse: convert to use the new mount API
+- UPSTREAM: convenience helper: get_tree_single()
+- UPSTREAM: fuse: Convert fusectl to use the new mount API
+- Revert "ANDROID: fs: fuse: Freeze client on suspend when request sent to userspace"
+- ANDROID: fs: fuse: Freeze client on suspend when request sent to userspace
+- ANDROID: fs/fuse: Keep FUSE file times consistent with lower file
+- ANDROID: fuse: Allocate zeroed memory for canonical path
+- UPSTREAM: fuse: fix matching of FUSE_DEV_IOC_CLONE command
+- ANDROID: fuse/passthrough: API V2 with __u32 open argument
+- FROMLIST: fuse: Fix crediantials leak in passthrough read_iter
+- FROMLIST: fuse: Introduce passthrough for mmap
+- FROMLIST: fuse: Use daemon creds in passthrough mode
+- FROMLIST: fuse: Handle asynchronous read and write in passthrough
+- FROMLIST: fuse: Introduce synchronous read and write for passthrough
+- FROMLIST: fuse: Passthrough initialization and release
+- FROMLIST: fuse: Definitions and ioctl for passthrough
+- FROMLIST: fuse: 32-bit user space ioctl compat for fuse device
+- fs: fuse: Reset to 4.19-stable state
+- ANDROID: fix redefinition error for restricted vendor hooks
+- UPSTREAM: ftrace: Return the first found result in lookup_rec()
+- UPSTREAM: ftrace: Separate out functionality from ftrace_location_range()
+- UPSTREAM: bpf: Fix L4 csum update on IPv6 in CHECKSUM_COMPLETE
+- UPSTREAM: net: Fix checksum update for ILA adj-transport
+- fixup! BACKPORT: bpf: Switch most helper return values from 32-bit int to 64-bit long
+- UPSTREAM: bpf: Add PROG_TEST_RUN support for sk_lookup programs
+- BACKPORT: treewide: Use sizeof_field() macro
+- UPSTREAM: bpf: Fix stackmap overflow check on 32-bit arches
+- UPSTREAM: mmap locking API: add mmap_read_trylock_non_owner()
+- BACKPORT: locking/lockdep: Remove unused @nested argument from lock_release()
+- UPSTREAM: tty/ldsem: Convert to regular lockdep annotations
+- BACKPORT: mm: introduce include/linux/pgtable.h
+- ANDROID: syscall_check: add vendor hook for bpf syscall
+- ANDROID: syscall_check: add vendor hook for open syscall
+- ANDROID: syscall_check: add vendor hook for mmap syscall
+- BACKPORT: mmap locking API: use coccinelle to convert mmap_sem rwsem call sites
+- UPSTREAM: mmap locking API: initial implementation as rwsem wrappers
+- BACKPORT: objtool: Rename frame.h -> objtool.h
+- ANDROID: Revert "ANDROID: bpf: validate bpf_func when BPF_JIT is enabled with CFI"
+- UPSTREAM: bpf: Fix -Wshadow warnings
+- UPSTREAM: bpf: Replace cant_sleep() with cant_migrate()
+- UPSTREAM: sched: Provide cant_migrate()
+- ANDROID: Revert "ANDROID: arm64: bpf: implement arch_bpf_jit_check_func"
+- UPSTREAM: x86/ibt,ftrace: Search for __fentry__ location
+- UPSTREAM: ftrace: Add a helper function to modify_ftrace_direct() to allow arch optimization
+- UPSTREAM: ftrace: Return ENOTSUPP when DYNAMIC_FTRACE_WITH_DIRECT_CALLS is not configured
+- UPSTREAM: ftrace: Add ftrace_find_direct_func()
+- UPSTREAM: ftrace: Add helper find_direct_entry() to consolidate code
+- ANDROID: bpf: Add vendor hook
+- ANDROID: fix copyright notice
+- ANDROID: GKI: add android_vendor.h
+- ANDROID: add support for vendor hooks
+- UPSTREAM: NFS: Move mount parameterisation bits into their own file
+- UPSTREAM: NFS: Make "port=" mount option optional for RDMA mounts
+- UPSTREAM: NFS: remove unneeded semicolon
+- UPSTREAM: NFS: Add a mount option "softerr" to allow clients to see ETIMEDOUT errors
+- UPSTREAM: NFS: Move internal constants out of uapi/linux/nfs_mount.h
+- UPSTREAM: NFS: Add a mount option to specify number of TCP connections to use
+- UPSTREAM: NFS: Create a root NFS directory in /sys/fs/nfs
+- UPSTREAM: gfs2: Convert gfs2 to fs_context
+- UPSTREAM: gfs2: kthread and remount improvements
+- BACKPORT: afs: Provide mount-time configurable byte-range file locking emulation
+- UPSTREAM: afs: Add file locking tracepoints
+- UPSTREAM: afs: Calculate lock extend timer from set/extend reply reception
+- UPSTREAM: afs: Implement YFS support in the fs client
+- UPSTREAM: afs: Fix FS.FetchStatus delivery from updating wrong vnode
+- UPSTREAM: afs: Implement the YFS cache manager service
+- UPSTREAM: afs: Increase to 64-bit volume ID and 96-bit vnode ID for YFS
+- UPSTREAM: afs: Use fs_context to pass parameters over automount
+- UPSTREAM: afs: Add a couple of tracepoints to log I/O errors
+- UPSTREAM: afs: Better tracing of protocol errors
+- UPSTREAM: afs: Add fs_context support
+- vfs: introduce file_modified() helper
+- wait: add wake_up_sync()
+- fixup! net: usb: rtl8150: Fix frame padding
+- drivers: input: touchscreen: Guard off game mode
+- drivers: input: touchscreen: Guard off game mode
+- drivers: fbdev: exynos: Guard mDNIe accessiblity modes
+- arm64: boot: dts: r8s: Expose unused 96hz display mode
+- arch: arm64: configs: r8s: re-enable MULTIRESOLUTION and related configs
+- input: touchscreen: zt7650: Invert glove mode logic
+- Revert "fbdev: exynos: make use of mask_brightness_store function"
+- CIP: Bump version suffix to -cip126 after merge from cip/linux-4.19.y-st tree
+- net: ravb: Ensure memory write completes before ringing TX doorbell
+- Update localversion-st, tree is up-to-date with 5.4.301.
+- net: ravb: Ensure memory write completes before ringing TX doorbell
+- net/ip6_tunnel: Prevent perpetual tunnel growth
+- tracing: Fix race condition in kprobe initialization causing NULL pointer dereference
+- rtc: interface: Ensure alarm irq is enabled when UIE is enabled
+- tpm_tis: Fix incorrect arguments in tpm_tis_probe_irq_single
+- media: s5p-mfc: remove an unused/uninitialized variable
+- NFSD: Fix last write offset handling in layoutcommit
+- NFSD: Minor cleanup in layoutcommit processing
+- KEYS: trusted_tpm1: Compare HMAC values in constant time
+- NFSD: Define a proc_layoutcommit for the FlexFiles layout type
+- vfs: Don't leak disconnected dentries on umount
+- ext4: detect invalid INLINE_DATA + EXTENTS flag combination
+- drm/amdgpu: use atomic functions with memory barriers for vm fault info
+- ext4: avoid potential buffer over-read in parse_apply_sb_mount_options()
+- spi: cadence-quadspi: Flush posted register writes before DAC access
+- spi: cadence-quadspi: Flush posted register writes before INDAC access
+- memory: samsung: exynos-srom: Fix of_iomap leak in exynos_srom_probe
+- memory: samsung: exynos-srom: Correct alignment
+- arm64: cputype: Add Neoverse-V3AE definitions
+- comedi: fix divide-by-zero in comedi_buf_munge()
+- binder: remove "invalid inc weak" check
+- xhci: dbc: enable back DbC in resume if it was enabled before suspend
+- usb/core/quirks: Add Huawei ME906S to wakeup quirk
+- USB: serial: option: add Telit FN920C04 ECM compositions
+- USB: serial: option: add Quectel RG255C
+- USB: serial: option: add UNISOC UIS7720
+- net: usb: rtl8150: Fix frame padding
+- ocfs2: clear extent cache after moving/defragmenting extents
+- MIPS: Malta: Fix keyboard resource preventing i8042 driver from registering
+- Revert "cpuidle: menu: Avoid discarding useful information"
+- sctp: avoid NULL dereference when chunk data buffer is missing
+- arm64, mm: avoid always making PTE dirty in pte_mkwrite()
+- net: add ndo_fdb_del_bulk
+- net: netlink: add NLM_F_BULK delete request modifier
+- net: rtnetlink: use BIT for flag values
+- net: rtnetlink: add helper to extract msg type's kind
+- net: rtnetlink: add msg kind names
+- net: rtnetlink: remove redundant assignment to variable err
+- m68k: bitops: Fix find_*_bit() signatures
+- hfsplus: return EIO when type of hidden directory mismatch in hfsplus_fill_super()
+- hfs: fix KMSAN uninit-value issue in hfs_find_set_zero_bits()
+- dlm: check for defined force value in dlm_lockspace_release
+- hfsplus: fix KMSAN uninit-value issue in hfsplus_delete_cat()
+- hfs: validate record offset in hfsplus_bmap_alloc
+- hfsplus: fix KMSAN uninit-value issue in __hfsplus_ext_cache_extent()
+- hfs: make proper initalization of struct hfs_find_data
+- hfs: clear offset and space out of valid records in b-tree node
+- exec: Fix incorrect type for ret
+- hfsplus: fix slab-out-of-bounds read in hfsplus_strcasecmp()
+- tls: always set record_type in tls_process_cmsg
+- tg3: prevent use of uninitialized remote_adv and local_adv variables
+- amd-xgbe: Avoid spurious link down messages during interface toggle
+- net: dlink: handle dma_map_single() failure properly
+- net: dl2k: switch from 'pci_' to 'dma_' API
+- xen/events: Update virq_to_irq on migration
+- media: lirc: Fix error handling in lirc_register()
+- media: rc: Directly use ida_free()
+- drm/exynos: exynos7_drm_decon: remove ctx->suspended
+- btrfs: avoid potential out-of-bounds in btrfs_encode_fh()
+- pwm: berlin: Fix wrong register in suspend/resume
+- media: cx18: Add missing check after DMA map
+- xen/events: Cleanup find_virq() return codes
+- cramfs: Verify inode mode when loading from disk
+- pid: Add a judgment for ns null in pid_nr_ns
+- minixfs: Verify inode mode when loading from disk
+- mfd: intel_soc_pmic_chtdc_ti: Drop unneeded assignment for cache_type
+- mfd: intel_soc_pmic_chtdc_ti: Fix invalid regmap-config max_register value
+- Squashfs: reject negative file sizes in squashfs_read_inode()
+- Squashfs: add additional inode sanity checking
+- mfd: vexpress-sysreg: Check the return value of devm_gpiochip_add_data()
+- fs: udf: fix OOB read in lengthAllocDescs handling
+- KVM: x86: Don't (re)check L1 intercepts when completing userspace I/O
+- net/9p: fix double req put in p9_fd_cancelled
+- ext4: guard against EA inode refcount underflow in xattr update
+- ext4: correctly handle queries for metadata mappings
+- ext4: increase i_disksize to offset + len in ext4_update_disksize_before_punch()
+- nfsd: nfserr_jukebox in nlm_fopen should lead to a retry
+- x86/umip: Fix decoding of register forms of 0F 01 (SGDT and SIDT aliases)
+- x86/umip: Check that the instruction opcode is at least two bytes
+- PCI/AER: Fix missing uevent on recovery when a reset is requested
+- rtc: interface: Fix long-standing race when setting alarm
+- mmc: core: SPI mode remove cmd7
+- mtd: rawnand: fsmc: Default to autodetect buswidth
+- sparc64: fix hugetlb for sun4u
+- sctp: Fix MAC comparison to be constant-time
+- scsi: hpsa: Fix potential memory leak in hpsa_big_passthru_ioctl()
+- parisc: don't reference obsolete termio struct for TC* constants
+- lib/genalloc: fix device leak in of_gen_pool_get()
+- iio: frequency: adf4350: Fix prescaler usage.
+- iio: dac: ad5421: use int type to store negative error codes
+- iio: dac: ad5360: use int type to store negative error codes
+- crypto: atmel - Fix dma_unmap_sg() direction
+- drm/nouveau: fix bad ret code in nouveau_bo_move_prep
+- media: i2c: mt9v111: fix incorrect type for ret
+- ACPI: debug: fix signedness issues in read/write helpers
+- tools build: Align warning options with perf
+- net: fsl_pq_mdio: Fix device node reference leak in fsl_pq_mdio_probe
+- tcp: Don't call reqsk_fastopen_remove() in tcp_conn_request().
+- net/sctp: fix a null dereference in sctp_disposition sctp_sf_do_5_1D_ce()
+- net/mlx4: prevent potential use after free in mlx4_en_do_uc_filter()
+- scsi: mvsas: Fix use-after-free bugs in mvs_work_queue
+- clk: nxp: Fix pll0 rate check condition in LPC18xx CGU driver
+- clk: nxp: lpc18xx-cgu: convert from round_rate() to determine_rate()
+- perf session: Fix handling when buffer exceeds 2 GiB
+- perf util: Fix compression checks returning -1 as bool
+- iio: frequency: adf4350: Fix ADF4350_REG3_12BIT_CLKDIV_MODE
+- pinctrl: check the return value of pinmux_ops::get_function_name()
+- Input: uinput - zero-initialize uinput_ff_upload_compat to avoid info leak
+- mm: hugetlb: avoid soft lockup when mprotect to large memory area
+- Squashfs: fix uninit-value in squashfs_get_parent
+- net: ena: return 0 in ena_get_rxfh_key_size() when RSS hash key is not configurable
+- nfp: fix RSS hash key size when RSS is not supported
+- drivers/base/node: fix double free in register_one_node()
+- ocfs2: fix double free in user_cluster_connect()
+- net: usb: Remove disruptive netif_wake_queue in rtl8150_set_multicast
+- usb: vhci-hcd: Prevent suspending virtually attached devices
+- scsi: mpt3sas: Fix crash in transport port remove by using ioc_info()
+- ipvs: Defer ip_vs_ftp unregister during netns cleanup
+- NFSv4.1: fix backchannel max_resp_sz verification check
+- remoteproc: qcom: q6v5: Avoid disabling handover IRQ twice
+- sparc: fix accurate exception reporting in copy_{from,to}_user for M7
+- sparc: fix accurate exception reporting in copy_to_user for Niagara 4
+- sparc: fix accurate exception reporting in copy_{from_to}_user for Niagara
+- sparc: fix accurate exception reporting in copy_{from_to}_user for UltraSPARC III
+- sparc: fix accurate exception reporting in copy_{from_to}_user for UltraSPARC
+- IB/sa: Fix sa_local_svc_timeout_ms read race
+- drivers/base/node: handle error properly in register_one_node()
+- watchdog: mpc8xxx_wdt: Reload the watchdog timer when enabling the watchdog
+- iio: consumers: Fix offset handling in iio_convert_raw_to_processed()
+- ASoC: Intel: bytcr_rt5651: Fix invalid quirk input mapping
+- ASoC: Intel: bytcr_rt5640: Fix invalid quirk input mapping
+- pps: fix warning in pps_register_cdev when register device fail
+- misc: genwqe: Fix incorrect cmd field being reported in error
+- usb: gadget: configfs: Correctly set use_os_string at bind
+- usb: phy: twl6030: Fix incorrect type for ret
+- tcp: fix __tcp_close() to only send RST when required
+- PCI: tegra: Fix devm_kcalloc() argument order for port->phys allocation
+- wifi: mwifiex: send world regulatory domain to driver
+- ALSA: lx_core: use int type to store negative error codes
+- media: rj54n1cb0c: Fix memleak in rj54n1_probe()
+- scsi: pm80xx: Fix array-index-out-of-of-bounds on rmmod
+- usb: host: max3421-hcd: Fix error pointer dereference in probe cleanup
+- drm/radeon/r600_cs: clean up of dead code in r600_cs
+- i2c: designware: Add disabling clocks when probe fails
+- i2c: mediatek: fix potential incorrect use of I2C_MASTER_WRRD
+- pwm: tiehrpwm: Fix corner case in clock divisor calculation
+- block: use int to store blk_stack_limits() return value
+- blk-mq: check kobject state_in_sysfs before deleting in blk_mq_unregister_hctx
+- pinctrl: meson-gxl: add missing i2c_d pinmux
+- soc: qcom: rpmh-rsc: Unconditionally clear _TRIGGER bit for TCS
+- ACPI: processor: idle: Fix memory leak when register cpuidle device failed
+- perf: arm_spe: Prevent overflow in PERF_IDX2OFF()
+- staging: axis-fifo: fix maximum TX packet length check
+- perf subcmd: avoid crash in exclude_cmds when excludes is empty
+- dm-integrity: limit MAX_TAG_SIZE to 255
+- wifi: rtlwifi: rtl8192cu: Don't claim USB ID 07b8:8188
+- USB: serial: option: add SIMCom 8230C compositions
+- media: rc: fix races with imon_disconnect()
+- media: imon: grab lock earlier in imon_ir_change_protocol()
+- media: imon: reorganize serialization
+- media: rc: Add support for another iMON 0xffdc device
+- media: i2c: tc358743: Fix use-after-free bugs caused by orphan timer in probe
+- media: tuner: xc5000: Fix use-after-free in xc5000_release
+- media: tunner: xc5000: Refactor firmware load
+- udp: Fix memory accounting leak.
+- media: b2c2: Fix use-after-free causing by irq_check_work in flexcop_pci_remove
+- scsi: target: target_core_configfs: Add length check to avoid buffer overflow
+- qcacld-3.0: Fix the compiler error- Argument list too long
